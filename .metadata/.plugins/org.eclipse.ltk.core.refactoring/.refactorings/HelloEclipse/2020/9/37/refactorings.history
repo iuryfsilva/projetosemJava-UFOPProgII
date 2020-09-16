@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;ConcessionariaVeiculos/src&apos;&#x0D;&#x0A;- Original project: &apos;HelloEclipse&apos;&#x0D;&#x0A;- Destination element: &apos;ConcessionariaVeiculos/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     HelloEclipse/src/componentes&#x0D;&#x0A;     HelloEclipse/src/helloeclipse" description="Copy packages" destination="=ConcessionariaVeiculos/src" element1="/src&lt;componentes" element2="/src&lt;helloeclipse" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1599745657738" version="1.0"/>
+</session>

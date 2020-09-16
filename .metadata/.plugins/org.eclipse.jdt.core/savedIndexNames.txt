@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\Iury Silva\Documents\Prog II\JAVA\UFOP\.metadata\.plugins\org.eclipse.jdt.core
+2694625780.index

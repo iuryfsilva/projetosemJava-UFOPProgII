@@ -1,0 +1,53 @@
+package pessoas;
+
+import componentesCurriculares.Disciplina;
+
+public class CriaAluno {
+
+	public static void main(String[] args) {
+		
+		Aluno aluno1 = new Aluno("2020.3.001", "Computação");
+	
+		Aluno aluno2 = new Aluno("2019.3.002", "Produção");
+
+		aluno1.matricular("CSI443");
+		aluno1.matricular("CSI032");
+		
+		aluno2.matricular("CSI443");
+		aluno2.matricular("CSI444");
+		aluno2.matricular("CSI123");
+		aluno2.matricular("CEA180");
+		
+		
+		System.out.printf("Aluno: %s \nMatrícula: %s\nCurso: %s\n", aluno1.getNome(), aluno1.getMatricula(), aluno1.getCurso());
+		System.out.println("Disciplinas cursadas: ");
+		aluno1.mostraListaDisciplina();
+		
+		System.out.printf("Aluno: %s \nMatrícula: %s\nCurso: %s\n", aluno2.getNome(), aluno2.getMatricula(), aluno2.getCurso());
+		System.out.println("Disciplinas cursadas: ");
+		aluno2.mostraListaDisciplina();
+		
+		aluno1.matricular("CEA965");
+		
+		
+		for(int controle = 0; controle < 10; controle++) {
+			aluno1.matricular("CEA180"); 
+		}
+	
+		aluno1.mostraListaDisciplina();
+		
+		System.out.println("Total de alunos criados: " + Aluno.getContadorDeAluno());
+	
+		Disciplina disciplina01 = new Disciplina();
+		disciplina01.setNome("CSI032");
+		disciplina01.setCargaHoraria(90);
+		
+		System.out.println("Nome da disciplina: " + disciplina01.getNome());
+		System.out.println("Carga horaria: " + disciplina01.getCargaHoraria());
+		
+		aluno1.disciplina = disciplina01;//associação entre objetos
+	
+		System.out.println(aluno1.disciplina.getNome());
+		
+	}
+}

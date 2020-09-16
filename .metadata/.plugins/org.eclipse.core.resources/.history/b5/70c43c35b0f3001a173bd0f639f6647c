@@ -1,0 +1,26 @@
+package exercicio03;
+import java.util.Scanner;
+
+public class TestaElevador {
+
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		Elevador elevadorSocial1 = new Elevador();
+		
+		System.out.println("Informe a capacidade do Elevador: ");
+		int capacidadeElevador = teclado.nextInt();
+		System.out.println("Informe o total de andares do predio: ");
+		int totalDeAndaresDoPredio = teclado.nextInt();
+		elevadorSocial1.inicializa(capacidadeElevador, totalDeAndaresDoPredio);
+		elevadorSocial1.entra();
+		elevadorSocial1.sobe();
+		elevadorSocial1.sai();
+		elevadorSocial1.desce();
+		
+		
+		teclado.close();
+	}
+
+}

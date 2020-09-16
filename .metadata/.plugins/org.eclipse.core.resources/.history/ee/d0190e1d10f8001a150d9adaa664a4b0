@@ -1,0 +1,9 @@
+package componentes;
+
+public class Medicos {
+
+	private String nome, especialidade;
+	
+	public Medicos
+	
+}

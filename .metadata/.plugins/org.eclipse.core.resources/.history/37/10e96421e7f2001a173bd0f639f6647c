@@ -1,0 +1,21 @@
+package exercicio01;
+
+import java.util.Scanner;
+
+public class TestaEmpregado {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Empregado empregado[] = new Empregado[4];
+		
+		for(int controle = 0; controle < empregado.length; controle++) {
+			System.out.println("Informe o nome do empregado: ");
+			String nomeEmpregado = teclado.next();
+			float salario = teclado.nextFloat();
+			empregado[controle] = new Empregado(nomeEmpregado, salario);
+		}
+		
+		teclado.close();		
+	}
+
+}
