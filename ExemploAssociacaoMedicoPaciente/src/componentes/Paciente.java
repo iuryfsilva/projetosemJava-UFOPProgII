@@ -14,25 +14,20 @@ public class Paciente {
 	public String getNome() {
 		return this.nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
 
 	public String getCpf() {
 		return this.cpf;
 	}
-
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
 
 	public int getCadastro() {
 		return this.cadastro;
 	}
-
 	public void setCadastro(int cadastro) {
 		this.cadastro = cadastro;
 	}
