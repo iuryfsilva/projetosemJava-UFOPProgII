@@ -15,6 +15,15 @@ public class Pessoa {
 		this.setCargo(cargo);
 		this.setUniversidade(universidade);
 	}
+	public Pessoa(String nome, String dataDeNascimento, String cargo, Universidade universidade, Departamento departamentoPessoa) {
+		//contadorPessoas++;
+		this.setNome(nome);
+		this.setDataDeNascimento(dataDeNascimento);
+		this.setCargo(cargo);
+		this.setUniversidade(universidade);
+		this.setDepartamentoPessoa(departamentoPessoa);
+	}
+	
 	
 	public String getNome() {
 		return this.nome;
@@ -63,7 +72,7 @@ public class Pessoa {
 	public void imprimeNomeEUniversidade() {
 		System.out.println("Nome: " + this.getNome());
 		System.out.println("Departamento: " + this.getUniversidade().getNomeUniversidade() + 
-						   " - " + this.getDepartamentoPessoa().getNomeDepartamento());
+	    				   " - " + this.getDepartamentoPessoa().getNomeDepartamento());		
 	}
 	
 	public void imprimeRelatorio() {

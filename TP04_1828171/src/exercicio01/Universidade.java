@@ -10,6 +10,11 @@ public class Universidade {
 	private Departamento departamentos[] = new Departamento[50];// não tinha colocado o tamanho
 	
 	// Métodos Especiais
+	public Universidade(String nomeUniversidade, String Localizacao, Departamento novoDepartamento) {
+		this.setNomeUniversidade(nomeUniversidade);
+		this.setLocalizacao(Localizacao);
+		this.addDepartamento(novoDepartamento);
+	}
 	public Universidade(String nomeUniversidade, String Localizacao) {
 		this.setNomeUniversidade(nomeUniversidade);
 		this.setLocalizacao(Localizacao);
@@ -46,15 +51,16 @@ public class Universidade {
 		}
 	}
 	
+	// Métodos Personalizados
 	public void addDepartamento(Departamento novoDepartamento) {
 		if(this.contadorDepartamentos < this.departamentos.length) {
 			this.departamentos[this.contadorDepartamentos] = novoDepartamento;
 			this.departamentos[this.contadorDepartamentos].setReferenciaUniversidade(this) ;
 			this.contadorDepartamentos++;
 		}
-	}
+	}	
 	
-	public void imprimirDepartamentosUniversidade() {
+	public void imprimeDepartamentosUniversidade() {
 		System.out.println("\n+++++ Lista de Departamentos da " + getNomeUniversidade() + " +++++\n");
 		for(int controle = 0; controle < contadorDepartamentos; controle++) {
 			System.out.println(" - " + departamentos[controle].getNomeDepartamento() + 

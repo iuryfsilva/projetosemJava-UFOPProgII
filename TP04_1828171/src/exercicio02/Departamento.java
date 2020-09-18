@@ -5,9 +5,12 @@ public class Departamento {
 	private String nomeDepartamento;
 	private Universidade referenciaUniversidade;
 	
+ 	public Departamento(String nomeDepartamento, Universidade referenciaUniversidade) {
+		this.setNomeDepartamento(nomeDepartamento);
+		this.setReferenciaUniversidade(referenciaUniversidade);
+	}
  	public Departamento(String nomeDepartamento) {
 		this.setNomeDepartamento(nomeDepartamento);
-		//this.setReferenciaUniversidade(referenciaUniversidade);
 	}
 
 	public String getNomeDepartamento() {
