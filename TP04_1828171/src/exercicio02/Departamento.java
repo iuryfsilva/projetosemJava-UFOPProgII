@@ -5,9 +5,9 @@ public class Departamento {
 	private String nomeDepartamento;
 	private Universidade referenciaUniversidade;
 	
- 	public Departamento(String nomeDepartamento, Universidade referenciaUniversidade) {
+ 	public Departamento(String nomeDepartamento) {
 		this.setNomeDepartamento(nomeDepartamento);
-		this.referenciaUniversidade = referenciaUniversidade;
+		//this.setReferenciaUniversidade(referenciaUniversidade);
 	}
 
 	public String getNomeDepartamento() {
@@ -17,9 +17,18 @@ public class Departamento {
 		this.nomeDepartamento = nomeDepartamento;
 	}
 	
-	public void imprimeUniversidadeAqualPertence() {
-		System.out.println("Universidade aqua pertence: " + this.referenciaUniversidade.getNomeUniversidade());
+	public Universidade getReferenciaUniversidade() {
+		return this.referenciaUniversidade;
 	}
+	public void setReferenciaUniversidade(Universidade referenciaUniversidade) {
+		this.referenciaUniversidade = referenciaUniversidade;
+	}
+	
+	public void imprimeUniversidadeAqualPertence() {
+		System.out.println("Universidade aqual pertence: " + this.referenciaUniversidade.getNomeUniversidade());
+	}
+
+
 	
 	
 	

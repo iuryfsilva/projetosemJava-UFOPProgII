@@ -1,9 +1,11 @@
 package exercicio01;
+import exercicio02.Departamento;
 
 public class Pessoa {
 	
 	private String nome, dataDeNascimento, cargo;
-	private Universidade universidade; 
+	private Universidade universidade;
+	private Departamento departamentoPessoa; 
 	
 	// Métodos Especiais
 	public Pessoa(String nome, String dataDeNascimento, String cargo, Universidade universidade) {
@@ -48,11 +50,20 @@ public class Pessoa {
 			this.getUniversidade().setContadorDePessoas(this.getUniversidade().getContadorDePessoas() + 1);
 		}
 	}
-
+	
+	public Departamento getDepartamentoPessoa() {
+		return this.departamentoPessoa;
+	}
+	public void setDepartamentoPessoa(Departamento departamentoPessoa) {
+		this.departamentoPessoa = departamentoPessoa;
+	}
+	
+	
 	// Métodos Personalizados
 	public void imprimeNomeEUniversidade() {
 		System.out.println("Nome: " + this.getNome());
-		System.out.println("Universidade: " + this.getUniversidade().getNomeUniversidade());
+		System.out.println("Departamento: " + this.getUniversidade().getNomeUniversidade() + 
+						   " - " + this.getDepartamentoPessoa().getNomeDepartamento());
 	}
 	
 	public void imprimeRelatorio() {

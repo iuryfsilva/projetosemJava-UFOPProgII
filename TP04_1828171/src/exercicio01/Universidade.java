@@ -4,12 +4,11 @@ import exercicio02.Departamento;
 public class Universidade {
 	
 	private int contadorPessoas = 0;
+	private int contadorDepartamentos = 0;
 	private String nomeUniversidade;
 	private String localizacao;
+	private Departamento departamentos[] = new Departamento[50];// não tinha colocado o tamanho
 	
-	private Departamento departamentos;
-	
-
 	// Métodos Especiais
 	public Universidade(String nomeUniversidade, String Localizacao) {
 		this.setNomeUniversidade(nomeUniversidade);
@@ -37,15 +36,32 @@ public class Universidade {
 		this.contadorPessoas = contadorDePessoas;
 	}
 	
-	public Departamento getDepartamentos() {
+	public Departamento[] getDepartamentos() {
 		return this.departamentos;
 	}
-	public void setDepartamentos(String nomeDepartamentos) {
-		//this.departamentos = new Departamento(nomeDepartamentos, this.getNomeUniversidade());
+	public void setDepartamentos(String nomeDepartamento) {
+		if(this.contadorDepartamentos < this.departamentos.length) {
+			this.departamentos[this.contadorDepartamentos] = new Departamento(nomeDepartamento); 
+			this.contadorDepartamentos++;
+		}
 	}
-
 	
-	// Métodos Personalizados
+	public void addDepartamento(Departamento novoDepartamento) {
+		if(this.contadorDepartamentos < this.departamentos.length) {
+			this.departamentos[this.contadorDepartamentos] = novoDepartamento;
+			this.departamentos[this.contadorDepartamentos].setReferenciaUniversidade(this) ;
+			this.contadorDepartamentos++;
+		}
+	}
+	
+	public void imprimirDepartamentosUniversidade() {
+		System.out.println("\n+++++ Lista de Departamentos da " + getNomeUniversidade() + " +++++\n");
+		for(int controle = 0; controle < contadorDepartamentos; controle++) {
+			System.out.println(" - " + departamentos[controle].getNomeDepartamento() + 
+							   " - " + departamentos[controle].getReferenciaUniversidade().getNomeUniversidade());
+		}
+		System.out.println("------------------------------------------------");
+	}
 
 
 }
