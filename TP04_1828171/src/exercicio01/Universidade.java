@@ -1,22 +1,26 @@
 package exercicio01;
+import exercicio02.Departamento;
 
 public class Universidade {
 	
 	private int contadorPessoas = 0;
-	private String nome;
+	private String nomeUniversidade;
 	private String localizacao;
+	
+	private Departamento departamentos;
+	
 
 	// Métodos Especiais
-	public Universidade(String nome, String Localizacao) {
-		this.setNome(nome);
+	public Universidade(String nomeUniversidade, String Localizacao) {
+		this.setNomeUniversidade(nomeUniversidade);
 		this.setLocalizacao(Localizacao);
 	}
 	
-	public String getNome() {
-		return this.nome;
+	public String getNomeUniversidade() {
+		return this.nomeUniversidade;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeUniversidade(String nomeUniversidade) {
+		this.nomeUniversidade = nomeUniversidade;
 	}
 	
 	public String getLocalizacao() {
@@ -32,6 +36,15 @@ public class Universidade {
 	public void setContadorDePessoas(int contadorDePessoas) {
 		this.contadorPessoas = contadorDePessoas;
 	}
+	
+	public Departamento getDepartamentos() {
+		return this.departamentos;
+	}
+	public void setDepartamentos(String nomeDepartamentos) {
+		//this.departamentos = new Departamento(nomeDepartamentos, this.getNomeUniversidade());
+	}
+
+	
 	// Métodos Personalizados
 
 

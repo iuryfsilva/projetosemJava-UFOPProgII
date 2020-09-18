@@ -52,12 +52,12 @@ public class Pessoa {
 	// Métodos Personalizados
 	public void imprimeNomeEUniversidade() {
 		System.out.println("Nome: " + this.getNome());
-		System.out.println("Universidade: " + this.getUniversidade().getNome());
+		System.out.println("Universidade: " + this.getUniversidade().getNomeUniversidade());
 	}
 	
 	public void imprimeRelatorio() {
 		System.out.println(this.getNome() + " trabalhou como " + this.getCargo() + " em " + 
-						   this.getUniversidade().getNome() + " (" + this.getUniversidade().getLocalizacao() + ").");
+						   this.getUniversidade().getNomeUniversidade() + " (" + this.getUniversidade().getLocalizacao() + ").");
 	}
 	
 }
