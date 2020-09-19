@@ -8,8 +8,8 @@
 <fullyQualifiedTypeName name="componentes.Paciente"/>
 <fullyQualifiedTypeName name="associacao.Consulta"/>
 <fullyQualifiedTypeName name="exercicio01.Universidade"/>
-<fullyQualifiedTypeName name="exercicio02.Departamento"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="exercicio02.Departamento"/>
 </qualifiedTypeNameHistroy>
