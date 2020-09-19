@@ -12,7 +12,7 @@ public class Pedido {
 		this.setValor_Total(0);
 		this.item = new ItemPedido(produto, quantidade);
 		this.adicionar_item(this.item);
-		this.contadorItens++;	
+			
 	}
 	
 	public float getValor_Total() {
@@ -25,6 +25,7 @@ public class Pedido {
 	// Métodos Personalizados
 	public void adicionar_item(ItemPedido item) {
 		this.vetorItem[contadorItens] = item;
+		this.contadorItens++;
 	}
 	
 	public float obter_total() {
