@@ -5,10 +5,12 @@ public class TestaPedido {
 	public static void main(String[] args) {
 
 		Produto margarina = new Produto(001, 20, "margarina");
-		//ItemPedido item = new ItemPedido(margarina, 8);
+		Produto sabao = new Produto(002, 1, "Sabão");
+		ItemPedido item = new ItemPedido(sabao, 5);
 		
 		Pedido novoPedido = new Pedido(margarina, 8);
-		//System.out.println("Valor Total: ");
+		novoPedido.adicionar_item(item);
+		System.out.println("Valor Total: ");
 		System.out.println(novoPedido.obter_total());
 		
 	}
