@@ -5,6 +5,14 @@ public class Usuario {
 	private int idUsuario;
 	private String nomeUsuario, login, senha;
 	
+	// Métodos Especiais
+	public Usuario(int idUsuario, String nomeUsuario, String login, String senha) {
+		this.setIdUsuario(idUsuario);
+		this.setNomeUsuario(nomeUsuario);
+		this.setLogin(login);
+		this.setSenha(senha);
+	}
+	
 	public int getIdUsuario() {
 		return this.idUsuario;
 	}
@@ -32,7 +40,6 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
 	
 	
 }

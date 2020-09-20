@@ -16,6 +16,8 @@
 		<item key="size.y" value="256"/>
 	</section>
 	<section name="quick_assist_proposal_size">
+		<item key="size.x" value="476"/>
+		<item key="size.y" value="252"/>
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>

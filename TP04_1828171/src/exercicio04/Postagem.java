@@ -1,31 +1,28 @@
 package exercicio04;
-import java.time.LocalDate;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Postagem {
-	private int idPostagem = 1;
+	private int idUsuario;
 	private String titulo, texto;
-	private Date dataPublicacao;
+	private LocalDateTime dataPublicacao;
+	private Scanner teclado = new Scanner(System.in);
 	
-	public Postagem() {
-		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Informe o Id da postagem: ");
-		this.setTitulo(teclado.next());
-		System.out.println("Informe o Id da postagem: ");
-		this.setTexto(teclado.next());
-		
-		teclado.close();
+	// Métodos Especiais
+	public Postagem(Usuario listaUsuarios[], Usuario usuarioInformado) {
+		if(this.autenticaUsuario(listaUsuarios, usuarioInformado)) 
+			this.criaPostagem(usuarioInformado.getIdUsuario());
+		else
+			System.out.println("Usuário não cadastrado!");
 	}
 	
-	public int getIdPostagem() {
-		return this.idPostagem;
+	public int getIdUsuario() {
+		return this.idUsuario;
 	}
-	public void setIdPostagem(int idPostagem) {
-		this.idPostagem = idPostagem;
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
 	}
-	
+
 	public String getTitulo() {
 		return this.titulo;
 	}
@@ -40,13 +37,44 @@ public class Postagem {
 		this.texto = texto;
 	}
 	
-	public Date getDataPublicacao() {
+	public LocalDateTime getDataPublicacao() {
 		return this.dataPublicacao;
 	}
 	public void setDataPublicacao() {
-		LocalDate dataPublicacao = LocalDate.now();
-		this.dataPublicacao = dataPublicacao;
+		this.dataPublicacao = LocalDateTime.now();
+	}
+	public void setDataPublicacao(LocalDateTime data) {
+		this.dataPublicacao = data;
 	}
 	
+	// Métodos Personalizados
+	public boolean autenticaUsuario(Usuario listaUsuarios[], Usuario usuarioInformado) {
+		for(int controle = 0; controle < listaUsuarios.length; controle++) {
+			if(listaUsuarios[controle].equals(usuarioInformado)) 
+				return true;				
+		}
+		return false;
+	}
+
+	private void criaPostagem(int idUsuario) {
+
+		this.setIdUsuario(idUsuario);
+		System.out.println("Informe o titulo da postagem: ");
+		this.setTitulo(teclado.next());
+		System.out.println("Digite o texto: ");
+		this.setTexto(teclado.next());
+		
+
+	}
 	
+	public void imprimePostagem() {
+		System.out.println("Id Usuario: " + this.getIdUsuario());
+		System.out.println("Titulo da postagem: " + this.getTitulo());
+		System.out.println("Postagem: \n" + this.getTexto());
+		if(this.getDataPublicacao() == null) 
+			System.out.println("Não publicada");
+		else
+			System.out.println("Data da Publicação: " + this.getDataPublicacao());
+	}
+
 }
