@@ -1,21 +1,22 @@
 package pessoas;
 import componentesCurriculares.Disciplina;
 
-public class Aluno {
+public class Aluno extends Pessoa{
 	
 	private static int contadorDeAluno = 0;//variável da classe, não é da instancia
-	private String matricula, nome, curso;
+	private String matricula, curso;
 	private String listaDeDisciplinas[] = new String[10];
 	private int indiceDisciplina;
 	
 	private Disciplina disciplina;
 
 	//Métodos Especiais
-	public Aluno(String matricula, String curso) {
+	public Aluno(String matricula, String curso, String nome, String cpf) {
 		
+		super(cpf);
+		super.setNome(nome);
 		contadorDeAluno++;
 		this.setMatricula(matricula);
-		//this.setNome(nome);
 		this.setCurso(curso);
 		//System.out.println("Total de alunos criados: " + Aluno.contadorDeAluno);
 	}
@@ -28,13 +29,6 @@ public class Aluno {
 			this.matricula = matricula;
 		else
 			System.out.println("Matricula Inválida!");
-	}
-	
-	public String getNome() {
-		return this.nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public String getCurso() {
