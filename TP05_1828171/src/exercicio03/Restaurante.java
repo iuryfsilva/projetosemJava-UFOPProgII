@@ -4,12 +4,11 @@ public class Restaurante extends Empresa{
 
 	private String tipoComida;
 	private float valorPrato;
-	private Empresa empresa;
 	
 	//Não entendi bem como dever ser feita a criação desse construtor
 	public Restaurante(String nome, String endereco,String cidade,
 			   		   String estado, int telefone, int cep){
-		this.empresa = new Empresa(nome, endereco, cidade, estado, telefone, cep); 
+		super(nome, endereco, cidade, estado, telefone, cep); 
 		
 		super.setNome(super.getNome());
 		
