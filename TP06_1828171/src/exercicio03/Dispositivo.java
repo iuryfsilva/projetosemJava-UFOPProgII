@@ -6,8 +6,8 @@ public abstract class Dispositivo {
 	private long capacidadeEmBytes;
 	
 	public Dispositivo(String n, long c) {
-		this.nome = n; //falta o this. no exerrcicio esse é o erro estudar a causa para poder explicar
-		this.capacidadeEmBytes = c;
+		nome = n; //falta o this. no exerrcicio esse é o erro estudar a causa para poder explicar
+		capacidadeEmBytes = c;
 	}
 	
 	
