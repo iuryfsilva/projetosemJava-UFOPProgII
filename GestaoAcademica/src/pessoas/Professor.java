@@ -24,4 +24,16 @@ public class Professor extends Pessoa{
 		this.salario = salario;
 	}
 	
+	@Override
+	public void escrveObjetoNaTela() {
+		System.out.println("--------------------------------");
+		System.out.println("-----------PROFESSOR------------");
+		System.out.println("--------------------------------");
+		super.escrveObjetoNaTela();
+		System.out.println("Titulação: "+ this.getTitulacao());
+		System.out.println("Sálario: "+ this.getSalario());
+	}
+
+
+
 }

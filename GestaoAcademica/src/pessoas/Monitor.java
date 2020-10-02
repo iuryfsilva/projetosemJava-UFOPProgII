@@ -16,4 +16,14 @@ public class Monitor extends Aluno{
 		this.disciplinaMonitorada = disciplina;
 	}
 	
+	@Override
+	public void escrveObjetoNaTela() {
+		System.out.println("--------------------------------");
+		System.out.println("------------MONITOR-------------");
+		System.out.println("--------------------------------");
+		super.escrveObjetoNaTela();
+		System.out.println("Disciplina monitorada: " + this.getDisciplinaMonitorada().getNome());
+	}
+
+
 }

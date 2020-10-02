@@ -102,4 +102,11 @@ public class Aluno extends Pessoa{
 		return contadorDeAluno;
 	}
 
+	@Override
+	public void escrveObjetoNaTela() {
+		System.out.println("-------------ALUNO--------------");
+		super.escrveObjetoNaTela();
+		System.out.println("Disciplina: " + this.disciplina.getNome());
+	}
+	
 }
