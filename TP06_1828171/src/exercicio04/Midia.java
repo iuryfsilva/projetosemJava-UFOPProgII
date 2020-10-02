@@ -40,8 +40,8 @@ public class Midia {
 	}
 	
 	// Métodos Personalizados
-	public String getTipo() {
-		return Midia.class.getSimpleName();
+	public String getTipo() {	
+		return this.getClass().getSimpleName();
 	}
 	
 	public String getDetalhes() {

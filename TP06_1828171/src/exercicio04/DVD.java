@@ -27,7 +27,7 @@ public class DVD extends Midia{
 	
 	@Override
 	public String getTipo() {
-		return super.getTipo() + " - " + DVD.class.getSimpleName();
+		return super.getTipo();
 	}
 
 	@Override

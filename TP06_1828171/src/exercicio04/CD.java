@@ -27,7 +27,7 @@ public class CD extends Midia{
 	
 	@Override
  	public String getTipo() {
-		return super.getTipo() + " - " + CD.class.getSimpleName();
+		return super.getTipo();
 	}
 
 	@Override
