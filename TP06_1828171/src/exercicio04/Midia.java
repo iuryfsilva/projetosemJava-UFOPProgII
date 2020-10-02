@@ -2,7 +2,7 @@ package exercicio04;
 
 import java.util.Scanner;
 
-public class Midia {
+public class Midia implements IMidia{
  	public Scanner teclado = new Scanner(System.in);
 	private int codigo;
 	private double preco;
@@ -40,10 +40,11 @@ public class Midia {
 	}
 	
 	// Métodos Personalizados
+	@Override
 	public String getTipo() {	
 		return this.getClass().getSimpleName();
 	}
-	
+	@Override
 	public String getDetalhes() {
 		return "Codigo: " + this.getCodigo() +
 			   ";\nNome: " + this.getNome() + 
