@@ -2,16 +2,30 @@ package exercicio05;
 
 public class ClasseAnimal implements Animal{
 
-	@Override
-	public String getNomeEspecie() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	private String nomeEspecie, nomeAnimal;
 
+	
+	public ClasseAnimal(String nomeEspecie, String nomeAnimal) {
+		this.setNomeEspecie(nomeEspecie);
+		this.setNomeAnimal(nomeAnimal);
+	}
+	
+	@Override
+
+	public String getNomeEspecie() {
+		return this.nomeEspecie;
+	}
+	public void setNomeEspecie(String nomeEspecie) {
+		this.nomeEspecie = nomeEspecie;
+	}
+	
 	@Override
 	public String getNomeAnimal() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.nomeAnimal;
+	}
+	public void setNomeAnimal(String nomeAnimal) {
+		this.nomeAnimal = nomeAnimal;
 	}
 
+	
 }
