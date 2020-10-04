@@ -12,12 +12,8 @@ public class TestaResultado {
 		vetorAnimais[3] = new ClasseAnimal("Pato", "Selvagem");
 		vetorAnimais[4] = new ClasseAnimal("Tubarão", "Branco");
 		
-		
-		
 		Ferramentas objFerramenta = new ClasseFerramentas();
-		
-			 
-		
+				
 		ClasseContabilizar contabilizar = new ClasseContabilizar();
 		Resultado[] vetorResultado = contabilizar.recebeParametros(vetorAnimais, objFerramenta);
 		

@@ -10,9 +10,9 @@ public class ClasseFerramentas implements Ferramentas{
 		
 		ArrayList<Animal> especieAuxiliar = new ArrayList<>();
 		
-		for(Animal controle: completo) {
-			if(controle.getNomeEspecie().equals(especieFiltrar)) {
-				especieAuxiliar.add(controle);
+		for(Animal valor: completo) {
+			if(valor.getNomeEspecie().equals(especieFiltrar)) {
+				especieAuxiliar.add(valor);
 			}
 		}
 		
