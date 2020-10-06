@@ -8,8 +8,6 @@ import pessoas.Professor;
 public class TesteHerancaComInterface {
 
 	public static void main(String[] args) {
-
-		IntefacePessoa i = new IntefacePessoa();
 		
 		IntefacePessoa vetorInterface[] = new IntefacePessoa[3];
 		
