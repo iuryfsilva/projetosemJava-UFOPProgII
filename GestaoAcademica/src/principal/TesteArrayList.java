@@ -1,5 +1,6 @@
 package principal;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -33,13 +34,33 @@ public class TesteArrayList {
 		
 		imprimeLista(listaDeNomes);
 		
+		List<Integer> listaDeNumeros = new ArrayList<Integer>();
+		
+		for(int controle = 0; controle < 100; controle++) {
+			listaDeNumeros.add(controle);
+		}
+		
+		imprimeLista(listaDeNumeros);
+		
+		Collections.shuffle(listaDeNumeros);
+		imprimeLista(listaDeNumeros);
+		
+		Collections.sort(listaDeNumeros);
+		imprimeLista(listaDeNumeros);
+
+		int retorno = Collections.max(listaDeNumeros);
+		System.out.println("O maior é: " + retorno);
+		
+		
 	}
 	
-	public static void imprimeLista(List<String> lista) {
+	public static void imprimeLista(List lista) {//List <String> só recebe listas do tipo String
 		System.out.println("-----------------------------");
 		for(int controle = 0; controle < lista.size(); controle++) {
 			System.out.println(lista.get(controle));
 		}
 	}
+	
+	
 
 }
