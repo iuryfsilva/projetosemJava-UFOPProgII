@@ -1,6 +1,6 @@
 package componentesCurriculares;
 
-public abstract class Curso {
+public abstract class Curso implements Comparable<Curso>{
 
 	private String modalidade, turno, campus;
 	private int duracao, numeroDeVagas;
@@ -45,4 +45,13 @@ public abstract class Curso {
 	
 	public abstract void escreveNaTela();
 	
+	@Override
+	public int compareTo(Curso o) {
+		if(this.getDuracao() < o.getDuracao())
+			return -1;
+		else if(this.getDuracao() > o.getDuracao())
+			return 1;
+		else
+			return 0;
+	}
 }
