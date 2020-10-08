@@ -54,10 +54,29 @@ public abstract class Pessoa implements IntefacePessoa{
 	}
 
 	public void escrveObjetoNaTela() {
-		System.out.println("Cpf: "+ this.getCpf());
-		System.out.println("Nome: "+ this.getNome());
-		System.out.println("Endereço: "+ this.getEndereco());
-
+		System.out.println(toString());
+	}
+	
+	@Override
+	public String toString() {
+		String string = "Cpf: " + this.getCpf();
+		string += " Nome: " + this.getNome();
+		string += " Endereço: " + this.getEndereco();		
+		return string;
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.getCpf().charAt(0);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Pessoa p = (Pessoa)obj;
+		if(this.getCpf().equals(p.getCpf()))
+			return true;
+		else
+			return false;
 	}
 
 }
