@@ -27,13 +27,13 @@ public class LeUmaSerieDeNomes {
 					nome = teclado.next(); 
 					if(setOfNames.contains(nome) == false)
 						setOfNames.add(nome);
-					continue;
+					break;
 				case 2: 
 					System.out.println("Informe o nome que deseja Remover: ");
 					nome = teclado.next(); 
 					if(setOfNames.contains(nome))
 						setOfNames.remove(nome);
-					continue;
+					break;
 				case 3:
 					System.out.println("Informe o nome que deseja Verificar: ");
 					nome = teclado.next(); 
@@ -41,12 +41,12 @@ public class LeUmaSerieDeNomes {
 						System.out.println("Nome ja armazenado. ");
 					else//aqui deve exibir uma mensagem de erro
 						System.out.println("Nome não encontrado");
-					continue;
+					break;
 				case 4:
 					System.out.println("Todos os nomes serão removidos.");
 					setOfNames.clear();
 					System.out.println("Conjunto sem elementos.");
-					continue;
+					break;
 				case 5:
 					controle = false;
 					break;
