@@ -36,8 +36,7 @@ public class ArmazenaProdutosSupermercado {
 					if(setOfProducts.contains(novoProduto) == false)
 						setOfProducts.add(novoProduto);
 					else
-						// Apresemtar uma mensagem de erro caso o produto ja esteja cadastrado
-						System.out.println("Produto ja existente no set");
+						System.out.println("Erro: Produto já presente no set");
 					continue;
 				case 2:
 					controle = false;

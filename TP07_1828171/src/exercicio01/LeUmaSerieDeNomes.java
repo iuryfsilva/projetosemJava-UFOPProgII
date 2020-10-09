@@ -40,7 +40,7 @@ public class LeUmaSerieDeNomes {
 					if(setOfNames.contains(nome))
 						System.out.println("Nome ja armazenado. ");
 					else//aqui deve exibir uma mensagem de erro
-						System.out.println("Nome não encontrado");
+						System.out.println("Aviso: Nome não encontrado");
 					break;
 				case 4:
 					System.out.println("Todos os nomes serão removidos.");

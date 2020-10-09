@@ -29,8 +29,12 @@ public class TestaEmpregado {
 		for (int controle = 0; controle < listaEmpregados.size(); controle++) {
 			System.out.println(listaEmpregados.get(controle).toString());
 		}
-			
+		
 		System.out.println("------------------------------");
+		System.out.println("-------Ordem Alfabetica--------");
+		Collections.sort(List<Funcionarios> listaEmpregados, Comparator.comparing((Funcionario) listampregados.getNum()));
+		
+		System.out.println("-------------------------------");
 		System.out.println("-------Ordem Alfabetica--------");
 		
 		Funcionario maiorValor = Collections.max(listaEmpregados);

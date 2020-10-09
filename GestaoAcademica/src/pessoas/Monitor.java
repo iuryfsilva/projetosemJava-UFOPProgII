@@ -9,7 +9,12 @@ public class Monitor extends Aluno{
 		super(matricula, curso, nome, cpf);
 	}
 
-	public Disciplina getDisciplinaMonitorada() {
+	public Disciplina getDisciplinaMonitorada() throws MonitorException{//Levanta o tratamento a exception
+		if(this.disciplinaMonitorada == null) {
+			MonitorException excecao = new MonitorException("Tem algo errado com esse monitor, "
+													   		 + "ele não possui uma disciplina");
+			//throw excecao;//Levanta a exceção para ques a chama
+		}
 		return this.disciplinaMonitorada;
 	}
 	public void setDisciplinaMonitorada(Disciplina disciplina) {
