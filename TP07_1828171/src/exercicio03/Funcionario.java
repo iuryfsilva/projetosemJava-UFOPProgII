@@ -6,12 +6,17 @@ public class Funcionario implements Comparable<Funcionario>{
 	private double salario;
 	
 	//Métodos Especiais
+	public Funcionario(String ID, String nome, String data) {
+		this.setID(ID);
+		this.setNome(nome);
+		this.setDataContratacao(data);
+	}	
 	public Funcionario(String ID, String nome, int dia, int mes,int ano) {
 		this.setID(ID);
 		this.setNome(nome);
-		this.setDataContratacao(dia, mes, ano);
+		this.setDataContratacao(dia, mes, ano);		
 	}
-
+		
 	public static int getContadorEmpregados() {
 		return contadorEmpregados;
 	}
@@ -27,7 +32,7 @@ public class Funcionario implements Comparable<Funcionario>{
 		return this.dataContratacao;
 	}
 	public void setDataContratacao(int dia, int mes, int ano) {
-		this.dataContratacao = Integer.toString(dia + mes + ano);
+		this.dataContratacao = Integer.toString(dia) + Integer.toString(mes) + Integer.toString(ano);
 	}
 	public void setDataContratacao(String dataContratacao) {
 		this.dataContratacao = dataContratacao;
@@ -74,11 +79,12 @@ public class Funcionario implements Comparable<Funcionario>{
 	
 	@Override
 	public int compareTo(Funcionario funcionario) {
-		if(this.getNome() < funcionario.getNome())
+		if(this.getNome().charAt(0) < funcionario.getNome().charAt(0))
 			return -1;
-		else if(this.getNome().funcionario.getNome())
+		else if(this.getNome().charAt(0) > funcionario.getNome().charAt(0))
 			return 1;
 		else
 			return 0;
 	}
+	
 }
