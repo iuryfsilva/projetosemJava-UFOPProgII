@@ -1,14 +1,15 @@
 package exercicio03;
 
-public class Funcionario {
+public class Funcionario implements Comparable<Funcionario>{
 	private static int contadorEmpregados = 0;
-	private String nome, cargo, ID;
+	private String nome, dataContratacao, ID;
 	private double salario;
 	
 	//Métodos Especiais
-	public Funcionario(String ID, String nome) {
+	public Funcionario(String ID, String nome, int dia, int mes,int ano) {
 		this.setID(ID);
 		this.setNome(nome);
+		this.setDataContratacao(dia, mes, ano);
 	}
 
 	public static int getContadorEmpregados() {
@@ -22,11 +23,14 @@ public class Funcionario {
 		this.nome = nome;
 	}
 	
-	public String getCargo() {
-		return this.cargo;
+	public String getDataContratacao() {
+		return this.dataContratacao;
 	}
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
+	public void setDataContratacao(int dia, int mes, int ano) {
+		this.dataContratacao = Integer.toString(dia + mes + ano);
+	}
+	public void setDataContratacao(String dataContratacao) {
+		this.dataContratacao = dataContratacao;
 	}
 
 	public String getID() {
@@ -63,9 +67,18 @@ public class Funcionario {
 	public String toString() {
 		String string = "ID: " + this.getID();
 		string += " \nNome: " + this.getNome();
-		string += " \nCargo: " + this.getCargo();
+		string += " \nData contratacao: " + this.getDataContratacao();
 		string += " \nSalário: " + this.getSalario();
 		return string;
 	}
 	
+	@Override
+	public int compareTo(Funcionario funcionario) {
+		if(this.getNome() < funcionario.getNome())
+			return -1;
+		else if(this.getNome().funcionario.getNome())
+			return 1;
+		else
+			return 0;
+	}
 }

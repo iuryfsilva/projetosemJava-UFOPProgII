@@ -24,20 +24,10 @@ public class ArrayListDeInteiros {
 		
 		System.out.println("------------------------------");
 		
-		int contadorMaior = 0;
-		for (Integer valor : listaDeInteiros) {
-			if(valor.equals(maiorValor))
-				contadorMaior++;
-		}
-		
+		int contadorMaior = Collections.frequency(listaDeInteiros, maiorValor);
 		System.out.println("Quantidade de vezes que o maior apareceu: " + contadorMaior);
-
-		int contadorMenor = 0;
-		for (Integer valor : listaDeInteiros) {
-			if(valor.equals(menorValor))
-				contadorMenor++;
-		}
 		
+		int contadorMenor = Collections.frequency(listaDeInteiros, menorValor);
 		System.out.println("Quantidade de vezes que o menor apareceu: " + contadorMenor);
 
 		System.out.println("------------------------------");
