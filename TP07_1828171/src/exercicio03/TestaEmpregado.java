@@ -2,6 +2,7 @@ package exercicio03;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class TestaEmpregado {
@@ -24,6 +25,7 @@ public class TestaEmpregado {
 		}
 		
 		Collections.sort(listaEmpregados);
+		System.out.println("-------Ordem Alfabetica--------");
 		System.out.println("------------------------------");
 
 		for (int controle = 0; controle < listaEmpregados.size(); controle++) {
@@ -32,10 +34,9 @@ public class TestaEmpregado {
 		
 		System.out.println("------------------------------");
 		System.out.println("-------Ordem Alfabetica--------");
-		Collections.sort(List<Funcionarios> listaEmpregados, Comparator.comparing((Funcionario) listampregados.getNum()));
+		Collections.sort(listaEmpregados, Comparator<T>);
 		
 		System.out.println("-------------------------------");
-		System.out.println("-------Ordem Alfabetica--------");
 		
 		Funcionario maiorValor = Collections.max(listaEmpregados);
 		System.out.println("Maior valor armazenado: " + maiorValor.toString());

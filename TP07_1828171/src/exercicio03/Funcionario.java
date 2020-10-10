@@ -1,6 +1,8 @@
 package exercicio03;
 
-public class Funcionario implements Comparable<Funcionario>{
+import java.util.Comparator;
+
+public class Funcionario implements Comparable<Funcionario>, Comparator{
 	private static int contadorEmpregados = 0;
 	private String nome, dataContratacao, ID;
 	private double salario;
@@ -79,9 +81,18 @@ public class Funcionario implements Comparable<Funcionario>{
 	
 	@Override
 	public int compareTo(Funcionario funcionario) {
-		if(this.getNome().charAt(0) < funcionario.getNome().charAt(0))
+		if(this.getSalario() < funcionario.getSalario())
 			return -1;
-		else if(this.getNome().charAt(0) > funcionario.getNome().charAt(0))
+		else if(this.getSalario() > funcionario.getSalario())
+			return 1;
+		else
+			return 0;
+	}
+	@Override
+	public int compare(Object obj1, Object obj2) {
+		if((obj1.getSalario()) < (obj2.getSalario()))
+			return -1;
+		else if(obj1.getSalario() > obj2.getSalario())
 			return 1;
 		else
 			return 0;
