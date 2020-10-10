@@ -1,6 +1,6 @@
 package exercicio09;
 
-import exercicio08.ExcecaoDoUsuario;
+import ExcecoesTP07.ExcecaoDoUsuario;
 
 public class IlustraRelancamentoExcecao {
 

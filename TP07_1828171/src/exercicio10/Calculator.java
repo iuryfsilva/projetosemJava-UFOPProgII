@@ -1,6 +1,8 @@
 package exercicio10;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import ExcecoesTP07.InvalidOperationException;
 
 public class Calculator {
 	private Scanner teclado = new Scanner(System.in);
@@ -38,7 +40,8 @@ public class Calculator {
 
 	
 	// Métodos Personalizados
-	public void execultaCalculadora() {
+	public void execultaCalculadora() {// throws InvalidOperationException, 
+										//	 InputMismatchException, ArithmeticException{
 			
 		System.out.println("Informe o primeiro valor: ");
 		this.setValor1(teclado.nextDouble());
@@ -46,15 +49,18 @@ public class Calculator {
 		System.out.println("Operação: ");
 		this.setOperacao(teclado.next());//não funciona se usar com .nextLine(),
 										 //poderia usar o (char)System.in.read();
-		
-		System.out.println("Informe o Segundo valor: ");
-		this.setValor2(teclado.nextDouble()); 
-
+		if(this.getOperacao().equalsIgnoreCase("l") == false) {
+			System.out.println("Informe o Segundo valor: ");
+			this.setValor2(teclado.nextDouble()); 
+		}
+				
 		this.operacaoNumerosReais();
 		
 	}
 	
-	public void operacaoNumerosReais() {
+	public void operacaoNumerosReais() { //throws InvalidOperationException, 
+	 									//	  InputMismatchException, ArithmeticException{
+		
 		switch (this.getOperacao()){
 		case "/":
 			this.divisao(this.getValor1(), this.getValor2());
@@ -69,10 +75,21 @@ public class Calculator {
 		case "+":
 			System.out.println("Resultado: " + this.soma(this.getValor1(), this.getValor2()));
 			break;
-		default:
-			System.out.println("Operação não cadastrada!");
-			System.out.println(this.getOperacao());
+		case "d":
+			System.out.println("Resultado divisão: " + this.div(this.getValor1(), this.getValor2()));
 			break;
+		case "D":
+			System.out.println("Resultado divisão: " + this.div(this.getValor1(), this.getValor2()));
+			break;
+		case "L":
+			System.out.println("Resultado log10: " + this.log10(this.getValor1()));
+			break;
+		case "l":
+			System.out.println("Resultado log10: " + this.log10(this.getValor1()));
+			break;	
+		default:
+			throw new InvalidOperationException("Operação não cadastrada - " + this.getOperacao());
+			//break;
 		}
 	}
 
@@ -99,12 +116,12 @@ public class Calculator {
 	}
 
 	public double div(double valorA, double valorB) {
-		return 0;
+		return (valorA/ valorB);
 	}
 	
 	public double log10(double valor) {
-		return 0;
+		return Math.log10(valor);
 	}
 
-	
+
 }

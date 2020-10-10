@@ -1,5 +1,5 @@
 package exercicio08;
-
+import ExcecoesTP07.ExcecaoDoUsuario;
 public class DemonstraExcecao {
 
 	public static void main(String[] args) {

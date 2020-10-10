@@ -2,7 +2,7 @@ package exercicio03;
 
 import java.util.Comparator;
 
-public class Funcionario implements Comparable<Funcionario>, Comparator{
+public class Funcionario implements Comparable<Funcionario>, Comparator<Funcionario>{
 	private static int contadorEmpregados = 0;
 	private String nome, dataContratacao, ID;
 	private double salario;
@@ -88,14 +88,15 @@ public class Funcionario implements Comparable<Funcionario>, Comparator{
 		else
 			return 0;
 	}
+
 	@Override
-	public int compare(Object obj1, Object obj2) {
-		if((obj1.getSalario()) < (obj2.getSalario()))
+	public int compare(Funcionario arg0, Funcionario arg1) {
+		if(arg0.getSalario() < arg1.getSalario())
 			return -1;
-		else if(obj1.getSalario() > obj2.getSalario())
+		else if(arg0.getSalario() > arg1.getSalario())
 			return 1;
 		else
-			return 0;
+			return 0;		
 	}
 	
 }

@@ -1,4 +1,4 @@
-package exercicio08;
+package ExcecoesTP07;
 
 public class ExcecaoDoUsuario extends Exception {
 	
