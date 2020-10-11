@@ -8,12 +8,12 @@ public class TestaCalculator {
 
 	public static void main(String[] args) {
 
-		//try {
-			
+		try {
+
 			Calculator calculadora = new Calculator();
 			calculadora.execultaCalculadora();
-		
-		/*} catch (InvalidOperationException excecao) {
+
+		} catch (InvalidOperationException excecao) {
 			System.err.println("Exceção: " + excecao.getMessage() + "\nA StackTrace é:\n");
 			excecao.printStackTrace();
 		} catch (InputMismatchException excecao) {//receber valores de tipos diferentes de int
@@ -25,7 +25,7 @@ public class TestaCalculator {
 		} catch (Exception excecao) {//Outros tipos de erros
 			System.err.println("ERRO: Erro inesperado!");
 			excecao.printStackTrace();
-		}*/
+		}
 	}
 
 }
