@@ -1,4 +1,4 @@
-package exercicio06;
+package exercicio07;
 
 import ExcecoesTP07.ContaExcecao;
 

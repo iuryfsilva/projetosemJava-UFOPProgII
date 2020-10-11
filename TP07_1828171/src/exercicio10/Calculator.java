@@ -40,8 +40,8 @@ public class Calculator {
 
 	
 	// Métodos Personalizados
-	public void execultaCalculadora() {// throws InvalidOperationException, 
-										//	 InputMismatchException, ArithmeticException{
+	public void execultaCalculadora()  throws InvalidOperationException, 
+										InputMismatchException, ArithmeticException{
 			
 		System.out.println("Informe o primeiro valor: ");
 		this.setValor1(teclado.nextDouble());
@@ -58,8 +58,8 @@ public class Calculator {
 		
 	}
 	
-	public void operacaoNumerosReais() { //throws InvalidOperationException, 
-	 									//	  InputMismatchException, ArithmeticException{
+	public void operacaoNumerosReais() throws InvalidOperationException, 
+	 								 InputMismatchException, ArithmeticException{
 		
 		switch (this.getOperacao()){
 		case "/":
@@ -89,7 +89,6 @@ public class Calculator {
 			break;	
 		default:
 			throw new InvalidOperationException("Operação não cadastrada - " + this.getOperacao());
-			//break;
 		}
 	}
 
