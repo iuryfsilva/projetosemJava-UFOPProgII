@@ -35,5 +35,8 @@
 <fullyQualifiedTypeName name="pessoas.Monitor"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="ExcecoesTP07.ExcecaoDoUsuario"/>
+<fullyQualifiedTypeName name="ExcecoesTP07.InvalidOperationException"/>
 <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="ExcecoesTP07.ContaExcecao"/>
 </qualifiedTypeNameHistroy>
