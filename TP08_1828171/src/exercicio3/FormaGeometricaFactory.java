@@ -5,5 +5,5 @@ public abstract class FormaGeometricaFactory {
 	public  Formageometrica getForma(){
 		return null;
 	}
-	
+
 }
