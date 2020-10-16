@@ -4,8 +4,7 @@ public class Siena extends CarroSedan{
 
 	@Override
 	public void exibirInfoSedan() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Marca: Fiat | Modelo: Siena        | Categoria: Sedan");		
 	}
 
 }
