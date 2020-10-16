@@ -1,6 +1,7 @@
 package principal;
 
 import bancoDeDados.Conexao;
+import exercicio1.UnicaInstancia;
 
 
 public class TesteSingleton {
@@ -17,6 +18,9 @@ public class TesteSingleton {
 		
 		if(com == com2)
 			System.out.println("Iguais");
+		
+		System.out.println("Quantidade de instancias criadas: " + Conexao.GetContadorDeInstancias());
+		
 	}
 
 }
