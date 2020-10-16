@@ -1,5 +1,8 @@
 package exercicio7;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AdaptadorVetorList implements SomadorEsperado{
 
 	private SomadorExistente somadorExistente;
@@ -11,10 +14,12 @@ public class AdaptadorVetorList implements SomadorEsperado{
 	@Override
 	public int somaVetor(int[] vetor) {
 		int soma = 0;
+		List<Integer> listaAuxiliar = new ArrayList<Integer>();  
 		for (int index = 0; index < vetor.length; index++) {
-			
+			listaAuxiliar.add(vetor[index]);
 		}
-		return 0;
+		soma = this.somadorExistente.somaLista(listaAuxiliar);
+		return soma;
 	}
 
 }
