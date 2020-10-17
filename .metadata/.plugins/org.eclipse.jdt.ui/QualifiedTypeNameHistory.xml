@@ -26,10 +26,7 @@
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="exercicio02.Funcionario"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="pessoas.MonitorException"/>
 <fullyQualifiedTypeName name="pessoas.Monitor"/>
@@ -39,4 +36,23 @@
 <fullyQualifiedTypeName name="ExcecoesTP07.InvalidOperationException"/>
 <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 <fullyQualifiedTypeName name="ExcecoesTP07.ContaExcecao"/>
+<fullyQualifiedTypeName name="bancoDeDados.Conexao"/>
+<fullyQualifiedTypeName name="com.ufop.prog2.factory.Pizza"/>
+<fullyQualifiedTypeName name="com.ufop.prog2.factory.Pizzaria"/>
+<fullyQualifiedTypeName name="com.ufop.prog2.factory.FabricaAbstrataDePizza"/>
+<fullyQualifiedTypeName name="com.ufop.prog2.factory.PizzariaItaliana"/>
+<fullyQualifiedTypeName name="com.ufop.prog2.factory.PizzariaMinas"/>
+<fullyQualifiedTypeName name="br.ufop.tomada.TomadaDoisPinos"/>
+<fullyQualifiedTypeName name="br.ufop.tomada.TomadaDeTresPinos"/>
+<fullyQualifiedTypeName name="br.ufop.tomada.AdaptadorDeTomadaDoisPinos"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="exercicio4.Sanduiche"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="exercicio5.Cliente"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="br.com.dominio.mensagem.Mensagem"/>
+<fullyQualifiedTypeName name="br.com.dominio.mensagem.MensagemSMS"/>
+<fullyQualifiedTypeName name="br.com.dominio.mensagem.MensagemFactory"/>
 </qualifiedTypeNameHistroy>
