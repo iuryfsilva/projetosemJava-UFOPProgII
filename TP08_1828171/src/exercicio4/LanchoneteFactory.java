@@ -1,15 +1,8 @@
 package exercicio4;
 
-import java.util.Scanner;
-
 public class LanchoneteFactory {
-	public static Scanner teclado = new Scanner(System.in);
 
-	public static Sanduiche factorySanduiche() {
-
-		System.out.println("Informe o tipo de sanduiche conforme a tabela do enunciado da questão: ");
-		String escolha = teclado.next();
-
+	public static Sanduiche factorySanduiche(String escolha) {
 		if(escolha.equalsIgnoreCase("CG"))
 			return new Sanduiche("Integral", "Prato", "De Peru", false);
 		else if(escolha.equalsIgnoreCase("JP"))
@@ -17,4 +10,5 @@ public class LanchoneteFactory {
 		else 
 			return new Sanduiche("Bola", "Cheddar", "De Peru", false);
 	}
+	
 }

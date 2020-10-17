@@ -5,7 +5,7 @@ public class Sanduiche {
 	private String pao, queijo, presunto;
 	private boolean salada; 
 	
-	public Sanduiche(String pao, String queijo, String presunto, boolean salada) {
+	protected Sanduiche(String pao, String queijo, String presunto, boolean salada) {
 		this.setPao(pao);
 		this.setQueijo(queijo);
 		this.setPresunto(presunto);

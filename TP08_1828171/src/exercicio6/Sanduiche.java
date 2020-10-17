@@ -2,44 +2,47 @@ package exercicio6;
 
 public class Sanduiche {
 
-	private String pao, queijo, presunto;
-	private boolean salada; 
+	private PaoIF pao;
+	private QueijoIF queijo;
+	private PresuntoIF presunto;
+	private SaladaIF salada;
 	
-	public Sanduiche(String pao, String queijo, String presunto, boolean salada) {
+	protected Sanduiche(PaoIF pao, QueijoIF queijo, PresuntoIF presunto, SaladaIF salada) {
 		this.setPao(pao);
 		this.setQueijo(queijo);
 		this.setPresunto(presunto);
 		this.setSalada(salada);
 	}
 
-	public String getPao() {
+	protected PaoIF getPao() {
 		return this.pao;
 	}
-	public void setPao(String pao) {
+	protected void setPao(PaoIF pao) {
 		this.pao = pao;
 	}
-	
-	public String getQueijo() {
+
+	protected QueijoIF getQueijo() {
 		return this.queijo;
 	}
-	public void setQueijo(String queijo) {
+	protected void setQueijo(QueijoIF queijo) {
 		this.queijo = queijo;
 	}
 
-	public String getPresunto() {
+	protected PresuntoIF getPresunto() {
 		return this.presunto;
 	}
-	public void setPresunto(String presunto) {
+	protected void setPresunto(PresuntoIF presunto) {
 		this.presunto = presunto;
 	}
-	
-	public boolean getSalada() {
+
+	protected SaladaIF getSalada() {
 		return this.salada;
 	}
-	public void setSalada(boolean salada) {
+	protected void setSalada(SaladaIF salada) {
 		this.salada = salada;
 	}
-	
+
+
 	@Override
 	public String toString() {
 		String string = "Sanduiche: \n Duas fatias de pão " + this.getPao();
